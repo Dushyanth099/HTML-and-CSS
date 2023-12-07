@@ -1,0 +1,64 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+section {
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #4caf50;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.objective,
+.education,
+.interests,
+.qualities,
+.achievements,
+.personal-info,
+.declaration {
+  margin-bottom: 30px;
+}
+
+.interests ul,
+.qualities ul,
+.achievements ul,
+.personal-info ul {
+  padding-left: 20px;
+}
+
+.hobbies ul {
+  padding-left: 20px;
+  color: #4caf50;
+}

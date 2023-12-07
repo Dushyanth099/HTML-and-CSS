@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: Inter, sans-serif;
+  background-color: black;
+  color: white;
+}
+img {
+  width: 200px;
+}
+.description {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: grey;
+}
+
+.title {
+  color: orangered;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.item_pretitle {
+  font-size: 1.4em;
+  color: grey;
+  font-weight: 300;
+}
+.item_title {
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+.item_subtitle {
+  font-size: 1.4rem;
+  color: grey;
+  font-weight: 400;
+}
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  padding: 5rem;
+  background: #070707;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+/* .container {
+  width: 100%;
+  grid-template-columns: 1fr;
+  padding: 3em;
+  gap: 7rem;
+} */
+.profile {
+  grid-column: 1 / -1;
+  margin-bottom: 2rem;
+}
+.group1,
+.group2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.group3 {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.group3 > div {
+  flex: 1;
+}
+.profile container {
+  display: flex;
+  gap: 2rem;
+}
+.profile_profileImg {
+  max-width: 250px;
+}
+.profilenamefirstname {
+  color: white;
+  font-weight: 200;
+  font-size: clamp(2rem, 8vw, 4rem);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.1%;
+}
+
+.profilenamelastname {
+  color: orangered;
+  font-weight: 700;
+  font-size: clamp(2rem, 15vw, 4rem);
+  text-transform: uppercase;
+  display: block;
+}
+.profiletitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.profile container {
+  flex-direction: column;
+}
+.skill-list {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  line-height: 2;
+}
+.edu_item {
+  margin-top: 2rem;
+}
+.certification_item {
+  margin-top: 2rem;
+}
+.skill_listdescription {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: grey;
+}
+.interest_items {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.interest_item {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: grey;
+}
+.interest_item svg {
+  width: 2rem;
+}
+.social_items {
+  margin-top: 2rem;
+}
+.social_item {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  color: grey;
+}
+.social_item:hover {
+  color: white;
+}
+.social_item svg {
+  width: 2rem;
+}
+hr {
+  grid-column: 1/-1;
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    font-family: Inter, sans-serif;
+    background-color: black;
+    color: white;
+  }
+
+  img {
+    width: 200px;
+  }
+
+  .description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: grey;
+  }
+
+  .title {
+    color: orangered;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .item_pretitle {
+    font-size: 1.4em;
+    color: grey;
+    font-weight: 300;
+  }
+
+  .item_title {
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 500;
+    margin: 0.8rem 0;
+  }
+
+  .item_subtitle {
+    font-size: 1.4rem;
+    color: grey;
+    font-weight: 400;
+  }
+
+  .container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background: #070707;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .profile {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+  }
+
+  .group1,
+  .group2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .group3 {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .group3 > div {
+    flex: 1;
+  }
+
+  .profile .container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .profile_profileImg {
+    max-width: 250px;
+  }
+
+  .profilenamefirstname {
+    color: white;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.1%;
+  }
+
+  .profilenamelastname {
+    color: orangered;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .profiletitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .profile .container {
+    flex-direction: column;
+  }
+
+  .skill-list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+  }
+
+  .edu_item {
+    margin-top: 2rem;
+  }
+
+  .certification_item {
+    margin-top: 2rem;
+  }
+
+  .skill_listdescription {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: grey;
+  }
+
+  .interest_items {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .interest_item {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: grey;
+  }
+
+  .interest_item svg {
+    width: 2rem;
+  }
+
+  .social_items {
+    margin-top: 2rem;
+  }
+
+  .social_item {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: grey;
+  }
+
+  .social_item:hover {
+    color: white;
+  }
+
+  .social_item svg {
+    width: 2rem;
+  }
+
+  hr {
+    grid-column: 1/-1;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.229);
+  }
+
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 2px solid rgba(128, 128, 128, 0.229);
+}

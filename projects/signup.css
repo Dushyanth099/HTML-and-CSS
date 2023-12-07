@@ -1,0 +1,52 @@
+body {
+  background: url("/projects/lion\ image.jpg");
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.regform {
+  width: 500px;
+  margin: 250px auto;
+  color: white;
+  padding: 10px 20px 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  border-radius: 8px;
+}
+.regform h1 {
+  text-align: center;
+  color: pink;
+}
+.regform .textlabel {
+  /* to lower the box down */
+  display: block;
+}
+.input input {
+  width: 100%;
+  font: size 1.2em;
+  border: 1px solid green;
+  border-radius: 8px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  margin: 5px 0px 0px 15px;
+}
+input:focus {
+  background-color: rgb(194, 224, 240);
+}
+.btn {
+  text-align: center;
+}
+button {
+  background-color: greenyellow;
+  font-size: 30px;
+  color: white;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  border: 1px solid green;
+  box-shadow: 2px;
+}
+.radio input {
+  accent-color: light blue;
+  transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}

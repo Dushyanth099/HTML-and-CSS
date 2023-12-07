@@ -1,0 +1,33 @@
+/* colouring differnces */
+h3 {
+  color: rgb(100, 150, 75);
+  color: #000000;
+  color: hsla(100, 33%, 44%);
+  color: black;
+  background-color: rgb(195, 255, 0);
+  background-color: rgba(222, 24, 24, 0.2);
+}
+body {
+  color: red;
+}
+table {
+  width: 300px;
+  margin: auto;
+  border-spacing: 10px 20px;
+  /* for normal table=collapse,or seperate  */
+  border-collapse: collapse;
+}
+th {
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: aqua;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- post or get to store data from the user -->
+    <!-- to connect and highlight use for  -->
+
+    <form
+      action="form redirect.html"
+      method="get"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="username">username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="username"
+        />
+      </div>
+      <div>
+        <label for="password">password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="password"
+        />
+      </div>
+      <div>
+        <label for="date of birth">date of birth</label>
+        <input
+          type="date"
+          name="date of birth"
+          id="date of birth"
+          placeholder="date of birth"
+          maxlength="4"
+          min="1900"
+        />
+      </div>
+      <div>
+        <label for="email">email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email
+          "
+        />
+      </div>
+      <div>
+        <label for="about">about</label>
+        <textarea name="about" id="about" cols="30" rows="10">about..</textarea>
+      </div>
+      <!-- alert notify -->
+      <div>
+        <label for="sms alert">SMS alert</label>
+        <input type="checkbox" name="sms alert" id="sms alert" />
+      </div>
+      <!-- radio button is used to select one only -->
+      <!-- should have same name i every radio -->
+      <div>
+        <label for="female">male</label>
+        <input type="radio" name="gender" id="male" />
+      </div>
+      <div>
+        <label for="female">female</label>
+        <input type="radio" name="gender" id="female" />
+      </div>
+
+      <button type="submit">submit</button>
+      <button type="reset">reset</button>
+      <!-- select tag for drop down -->
+      <div>
+        <select name="state" id="state">
+          <option value="tamilnadu">tamilnadu</option>
+          <option value="Ap" label="Ap"></option>
+          <option value="telugana">telugana</option>
+        </select>
+      </div>
+      <!-- choosing file -->
+      <div>
+        <label for="file">resume</label>
+        <input type="file" id="file" name="file" />
+      </div>
+      <!-- submit image creation -->
+      <div><input type="image" src="submit.jpeg"width"90"></div>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>

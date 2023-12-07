@@ -1,0 +1,11 @@
+p {
+  padding: 90px 0px 89px;
+  color: black;
+  background-color: blue;
+  font-size: 2em;
+  font-weight: 900;
+  width: 210px;
+  height: 200px;
+  text-decoration: overline;
+  text-align: center;
+}
