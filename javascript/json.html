@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // java script object
+      var user = new Object();
+      user.name = "ram kumar";
+      user.age = 24;
+      document.write("my name is " + user.name + " my age is " + user.age);
+      // java script object literal
+      var user = { name: "ramkumar", age: 35 };
+      document.write("<br>my name is " + user.name + " my age is " + user.age);
+      //JSON
+      var user = { name: "ramkumar", age: 35 };
+      document.write("<br>my name is " + user.name + " my age is " + user.age);
+      var user={
+          firstname:"ram",
+          lastName:"kumar",
+          fullName:function(){
+              return(this.firstName+ " " +this.lastName)
+            }}
+            document.write(user.fullName());
+            </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // function add(){
+      //     var a = prompt("Enter the num1: ");
+      //     var b = prompt("Enter the num2: ");
+      //     c = Number(a) + Number(b);
+      //     alert("Answer: " + c)
+      // }
+      function add() {
+        var a = document.getElementById("inputa").value;
+        var b = document.getElementById("inputb").value;
+        var c = Number(a) + Number(b);
+        document.getElementById("result").innerHTML = "<h2>" + c + "</h2>";
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" class="btn btn-primary m-5 px-5 py-2" onclick="add()">
+      Add
+    </button>
+    <br />
+    <p ondblclick="add()" style="cursor: pointer">add</p>
+    <div onkeypress="add()">add</div>
+
+    <input type="number" id="inputa" placeholder="Enter A" /><br />
+    <input type="number" id="inputb" placeholder="Enter b" /><br />
+    <button type="button" onclick="add()">Add</button>
+    <div id="result">Sample Result</div>
+    let sampleJson = { "name":"Ranjith" "} alert(sampleJson.data[2])
+  </body>
+</html>

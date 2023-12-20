@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function submit() {
+        console.log("function call");
+        let name = document.signup.name.value;
+        let password = document.signup.password.value;
+        let retypepassword = document.signup.retypepassword.value;
+        if (
+          name &&
+          name.length !== 0 &&
+          password &&
+          password.length < 6 &&
+          retypepassword &&
+          retypepassword == 6
+        ) {
+          alert("success");
+          return true;
+        } else if (name || !password || !retypepassword) {
+          alert("please fill this form");
+          return false;
+        } else if (name && name.length !== 0) {
+          alert("please enter name");
+          return false;
+        } else if (password.length < 6) {
+          alert("please enter valid password");
+          return flase;
+        } else if (retypepassword === password) {
+          alert("password mis-match");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      Name:<input type="text" name="name" placeholder="name" /> password:<input
+        type="password"
+        name="passsword"
+        placeholder="passsword"
+      />
+      Re-type passsword
+      <input
+        type="password"
+        name="retypepassword"
+        placeholder="retypepassword"
+      />
+      <input type="submit" value="register" />
+    </form>
+  </body>
+</html>

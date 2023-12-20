@@ -1,0 +1,22 @@
+h1 {
+  color: red;
+}
+* {
+  background-color: lightcyan;
+  color: black;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+.dush {
+  background-color: blue;
+  color: aqua;
+  font-size: 2em;
+  font-weight: 100;
+  font-style: italic;
+  font-display: var(aqua);
+  font-stretch: semi-condensed;
+  text-transform: unset;
+  text-decoration: solid;
+}

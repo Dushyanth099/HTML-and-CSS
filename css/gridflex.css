@@ -1,0 +1,65 @@
+/* flex */
+html {
+  /* color: black; */
+}
+
+.container {
+  background-color: lightgray;
+  padding: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 20px solid white;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tree1 {
+  background-color: red;
+  flex: 1;
+  /* order: 2; */
+}
+.tree2 {
+  background-color: aqua;
+  flex: 1;
+}
+.tree3 {
+  background-color: yellow;
+  flex: 1;
+  gap: 10px;
+}
+/* grid */
+.container2 {
+  margin-top: 50px;
+  /* border: 20px solid green; */
+  color: black;
+  background-color: lightblue;
+  display: grid;
+  /* grid-template-columns: 1vw 1 vw 1vw; */
+  grid-template-columns: repeat(autofit, minmax(200px, 1fr) 1fr 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  /* column-gap: 20px;
+row-gap: 20px; */
+  gap: 20px;
+}
+.branch1 {
+  padding: 1rem;
+  background-color: blue;
+  color: red;
+}
+.outerbox {
+  display: grid;
+  margin: 20px;
+  background-color: green;
+  /* height: 600px; */
+  /* width: 500px; */
+  color: black;
+  gap: 20px;
+}
+
+.box {
+  background-color: aqua;
+  font-size: 4rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
