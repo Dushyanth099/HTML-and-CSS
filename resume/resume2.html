@@ -10,90 +10,275 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="profile">
-        <div class="profile_container">
-          <div class="profile_profileImg">
-            <img
-              src="/resume/dush passportsize pic-photoaidcom-cropped (1).jpg"
-              alt="Dushyanthkumar"
-            />
-          </div>
-          <div>
-            <h1 class="profile_name">
-              <span class="profile_name_firstName">Dushyanth</span>
-              <span class="profile_name_lastName">Kumar</span>
-            </h1>
-            <p class="profile_title">FullStack Developer</p>
-            <p class="description profile_description">
-              A dedicated and detail-oriented individual looking for an
-              entry-level position at a well-reputed organization to gain
-              experience and exposure and expand my knowledge. Seeking an
-              entry-level position where I can augment my knowledge, skills, and
-              experience and contribute to the success of the organization.
-            </p>
-            <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf"
-              >Download Resume</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="group-1">
-        <div class="skills">
-          <h3 class="title">Expertise</h3>
-          <ul class="skills_list description">
-            <li>JavaScript</li>
-            <li>HTML CSS</li>
-            <li>React JS</li>
-            <li>MERN STACK</li>
-          </ul>
-        </div>
-        <div class="edu">
-          <h3 class="title">Education</h3>
-          <div class="edu_item">
-            <p class="item_preTitle">2018-2020</p>
-            <h4 class="item_title">MBA in Finance</h4>
-            <p class="item_subtitle">Kalaignar Karunanidhi Institute of Technology </p>
-          </div>
-          <div class="edu_item">
-            <p class="item_preTitle">2015-20218</p>
-            <h4 class="item_title">BBA(CA)</h4>
-            <p class="item_subtitle">Hindusthan College Of Arts And Science</p>
-          </div>
-        </div>
+    <div id="container"></div>
 
-        <div class="certification">
-          <h3 class="title">certification</h3>
-          <div class="certification_item">
-            <p class="item_preTitle">2024</p>
-            <h4 class="item_title">FullStack Developer</h4>
-            <p class="description">
-              I have a knowledge in designing, creating, testing, and
-                    deploying a complete web application from start to finish.
-                    It involves working with various technologies and tools,
-                    including front-end web development, back-end web
-                    development, and database development.
-                  </p>
-          </div>
-        </div>
-      </div>
-      <div class="group-2">
-        <div class="exp">
-          <h3 class="skills"></h3>
-        
-             <div class="skills1">
-              <h3 class="title">Strengths</h3>
-              <ul class="skill_listdescription">
-                <li>Adoptable</li>
-                <li>Team leader and Roll player</li>
-                <li>Problem Solver</li>
-              </ul>
-        </div>
+    <script>
+      function loadContent() {
+        var users = {
+          data: [
+            {
+              name: {
+                firstName: "Dushyanth",
+                lastName: "Kumar",
+              },
+              image: "/resume/dush_passportsize_pic-photoaidcom-cropped(1).jpg",
+              role: "FullStack Developer",
+              bio:
+                "A dedicated and detail-oriented individual looking for an entry-level position at a well-reputed organization to gain experience and exposure and expand my knowledge. Seeking an entry-level position where I can augment my knowledge, skills, and experience and contribute to the success of the organization.",
+              downloadLink: "./cv.pdf",
+              skills: ["JavaScript", "HTML CSS", "React JS", "MERN STACK"],
+              education: [
+                {
+                  duration: "2018-2020",
+                  degree: "MBA in Finance",
+                  institution:
+                    "Kalaignar Karunanidhi Institute of Technology",
+                },
+                {
+                  duration: "2015-2018",
+                  degree: "BBA(CA)",
+                  institution: "Hindusthan College Of Arts And Science",
+                },
+              ],
+              certification: [
+                {
+                  year: "2024",
+                  title: "FullStack Developer",
+                  description:
+                    "I have knowledge in designing, creating, testing, and deploying a complete web application from start to finish. It involves working with various technologies and tools, including front-end web development, back-end web development, and database development.",
+                },
+              ],
+              strengths: [
+                "Adaptable",
+                "Team leader and Roll player",
+                "Problem Solver",
+              ],
+              interests: ["Music", "Books", "Travel"],
+              contact: {
+                location: "Tiruppur, Tamilnadu",
+                phone: "+790 455 9204",
+                email: "Dushyanth0699@gmail.com",
+              },
+              socials: [
+                {
+                  platform: "GitHub",
+                  url: "#",
+                  username: "Dushyanth0699",
+                },
+                {
+                  platform: "Twitter",
+                  url: "#",
+                  username: "Dushyanth09",
+                },
+                {
+                  platform: "LinkedIn",
+                  url: "#",
+                  username: "Dushyanthkumar",
+                },
+              ],
+            },
+          ],
+        };
+        let htmlContent = "";
+        users.data.forEach((user) => {
+          htmlContent +=
+            `<div class="container">
+              <div class="profile">
+                <div class="profile_container">
+                  <div class="profile_profileImg">
+                    <img src="${user.image}" alt="Dushyanthkumar" />
+                  </div>
+                  <div>
+                    <h1 class="profile_name">
+                      <span class="profile_name_firstName">${user.name.firstName}</span>
+                      <span class="profile_name_lastName">${user.name.lastName}</span>
+                    </h1>
+                    <p class="profile_title">${user.role}</p>
+                    <p class="description profile_description">${user.bio}</p>
+                    <a class="downloadBtn" href="${user.downloadLink}" download="Resume.pdf">Download Resume</a>
+                  </div>
+                </div>
+              </div>
+              <div class="group-1">
+                <div class="skills">
+                  <h3 class="title">Expertise</h3>
+                  <ul class="skills_list description">${user.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+                </div>
+                <div class="edu">
+                  <h3 class="title">Education</h3>
+                  <div class="edu_item">
+                    <p class="item_preTitle">${user.education[0].duration}</p>
+                    <h4 class="item_title">${user.education[0].degree}</h4>
+                    <p class="item_subtitle">${user.education[0].institution}</p>
+                  </div>
+                  <div class="edu_item">
+                    <p class="item_preTitle">${user.education[1].duration}</p>
+                    <h4 class="item_title">${user.education[1].degree}</h4>
+                    <p class="item_subtitle">${user.education[1].institution}</p>
+                  </div>
+                </div>
 
-            <div class="interest">
-          <h3 class="title">Interest</h3>
-          <div class="interest_items">
-            <div class="interest_item">
+                <div class="certification">
+                  <h3 class="title">Certification</h3>
+                  <div class="certification_item">
+                    <p class="item_preTitle">${user.certification[0].year}</p>
+                    <h4 class="item_title">${user.certification[0].title}</h4>
+                    <p class="description">${user.certification[0].description}</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Other content -->
+            </div>`;
+        });
+        document.getElementById("container").innerHTML = htmlContent;
+      }
+
+      loadContent();
+      feather.replace();
+    </script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="resume2.css" />
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+    <script>
+      function loadContent() {
+        var users = {
+          data: [
+            {
+              name: {
+                firstName: "Dushyanth",
+                lastName: "Kumar",
+              },
+              image: "/resume/dush passportsize pic-photoaidcom-cropped (1).jpg",
+              role: "FullStack Developer",
+              bio:
+                "A dedicated and detail-oriented individual looking for an entry-level position at a well-reputed organization to gain experience and exposure and expand my knowledge. Seeking an entry-level position where I can augment my knowledge, skills, and experience and contribute to the success of the organization.",
+              downloadLink: "./cv.pdf",
+              skills: ["JavaScript", "HTML CSS", "React JS", "MERN STACK"],
+              education: [
+                {
+                  duration: "2018-2020",
+                  degree: "MBA in Finance",
+                  institution:
+                    "Kalaignar Karunanidhi Institute of Technology",
+                },
+                {
+                  duration: "2015-2018",
+                  degree: "BBA(CA)",
+                  institution: "Hindusthan College Of Arts And Science",
+                },
+              ],
+              certification: [
+                {
+                  year: "2024",
+                  title: "FullStack Developer",
+                  description:
+                    "I have knowledge in designing, creating, testing, and deploying a complete web application from start to finish. It involves working with various technologies and tools, including front-end web development, back-end web development, and database development.",
+                },
+              ],
+              strengths: [
+                "Adaptable",
+                "Team leader and Roll player",
+                "Problem Solver",
+              ],
+              interests: ["Music", "Books", "Travel"],
+              contact: {
+                location: "Tiruppur, Tamilnadu",
+                phone: "+790 455 9204",
+                email: "Dushyanth0699@gmail.com",
+              },
+              socials: [
+                {
+                  platform: "GitHub",
+                  url: "#",
+                  username: "Dushyanth0699",
+                },
+                {
+                  platform: "Twitter",
+                  url: "#",
+                  username: "Dushyanth09",
+                },
+                {
+                  platform: "LinkedIn",
+                  url: "#",
+                  username: "Dushyanthkumar",
+                },
+              ],
+            },
+          ],
+        };
+        let htmlContent = "";
+        users.data.forEach((user) => {
+          htmlContent +=
+            `<div class="container">
+              <div class="profile">
+                <div class="profile_container">
+                  <div class="profile_profileImg">
+                    <img src="${user.image}" alt="Dushyanthkumar" />
+                  </div>
+                  <div>
+                    <h1 class="profile_name">
+                      <span class="profile_name_firstName">${user.name.firstName}</span>
+                      <span class="profile_name_lastName">${user.name.lastName}</span>
+                    </h1>
+                    <p class="profile_title">${user.role}</p>
+                    <p class="description profile_description">${user.bio}</p>
+                    <a class="downloadBtn" href="${user.downloadLink}" download="Resume.pdf">Download Resume</a>
+                  </div>
+                </div>
+              </div>
+              <div class="group-1">
+                <div class="skills">
+                  <h3 class="title">Expertise</h3>
+                  </div>
+                <div class="edu">
+                  <h3 class="title">Education</h3>
+                  <div class="edu_item">
+                    <p class="item_preTitle">${user.education[0].duration}</p>
+                    <h4 class="item_title">${user.education[0].degree}</h4>
+                    <p class="item_subtitle">${user.education[0].institution}</p>
+                  </div>
+                  <div class="edu_item">
+                    <p class="item_preTitle">${user.education[1].duration}</p>
+                    <h4 class="item_title">${user.education[1].degree}</h4>
+                    <p class="item_subtitle">${user.education[1].institution}</p>
+                  </div>
+                </div>
+
+                <div class="certification">
+                  <h3 class="title">Certification</h3>
+                  <div class="certification_item">
+                    <p class="item_preTitle">${user.certification[0].year}</p>
+                    <h4 class="item_title">${user.certification[0].title}</h4>
+                    <p class="description">${user.certification[0].description}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="skills1">
+                    <ul class="skill_listdescription">
+                      <h3>Skills
+                      <li>Adoptable</li>
+                      <li>Team leader and Roll player</li>
+                      <li>Problem Solver</li>
+                      </ul>
+                      </div>
+                      
+                      <div class="interest">
+                        <h3 class="title">${user.interests}</h3>
+                        <div class="interest_items">
+                          <div class="interest_item">
               <i data-feather="music"></i>
               <span>Music</span>
             </div>
@@ -111,33 +296,38 @@
       <hr />
       <div class="group-3">
         <div class="contact">
-          <h3 class="title">Contact</h3>
+          <h3 class="title">${user.contact}</h3>
           <div class="contact_info">
-            <p class="description">Tiruppur, Tamilnadu</p>
-            <p class="description">+790 455 9204</p>
-            <p class="description">Dushyanth0699@gmail.com</p>
+            <p class="description">${user.location}</p>
+            <p class="description">+${user.phone}</p>
+            <p class="description">${user.email}</p>
           </div>
         </div>
         <div class="social">
-          <h3 class="title">Socials</h3>
+          <h3 class="title">${user.socail}</h3>
           <div class="social_items">
             <a href="#" target="_b" class="social_item">
-              <i data-feather="github"></i>
-              <span>/Dushyanth0699</span>
-            </a>
-            <a href="#" target="_blank" class="social_item">
-              <i data-feather="twitter"></i>
-              <span>/Dushyanth09</span>
-            </a>
-            <a href="#" target="_blank" class="social_item">
-              <i data-feather="linkedin"></i>
-              <span>/Dushyanthkumarspan>
-            </a>
-          </div>
-        </div>
-      </div>
+              <i data-feather="${user.platform}"></i>
+              <span>/${user.username}</span>
+              </a>
+              <a href="#" target="_blank" class="social_item">
+                <i data-feather="${user.platform}"></i>
+                <span>/${user.username}</span>
+                </a>
+                <a href="#" target="_blank" class="social_item">
+                  <i data-feather="${user.platform}"></i>
+                  <span>/${user.username}</span>
+                  </a>
+                  </div>
+                  </div>
     </div>
-    <script>
+
+            </div>`;
+        });
+        document.getElementById("container").innerHTML = htmlContent;
+      }
+
+      loadContent();
       feather.replace();
     </script>
   </body>

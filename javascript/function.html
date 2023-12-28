@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function testing(a, b) {
+        console.log("a:" + a);
+        console.log("b:" + b);
+        let c = a + b; //logical implemation
+        return c;
+      }
+      let val = testing(10, 23);
+      alert("val return:" + val);
+      //es6
+      let val1 = (a, b) => {
+        console.log("a:" + a);
+        console.log("a:" + a);
+        let c = a + b; //logical implemation
+        return c;
+      };
+      alert("value1 return : " + val1(10, 35));
+      const oddEven = (n) => {
+        return n % 2 === 0;
+      };
+      alert("oddoreven number return : " + oddEven(11));
+
+      //spread operator
+      let arr = [1, 2, 3, 4];
+      let arr1 = [3, 4, 5, 6];
+      let mergearr = [...arr, ...arr1];
+      console.log(arr + arr1);
+      console.log(...mergearr);
+      const add = (a, b, c, d) => {
+        return a + b + c + d;
+      };
+      //addition
+      console.log("normal add :" + add(2, 5, 6, 7));
+      const spreadAdd = (...a) => {
+        let c = 0;
+        for (val of a) {
+          c = c + val;
+        }
+
+        // another for loop method
+        // a.forEach(val=>{c =c+val})
+        return c;
+      };
+      {
+        let a = [1, 2, 3, 4];
+        let b = [3, 4, 5, 6];
+
+        console.log("spreadAdd:" + spreadAdd(2, 5, 6, 7));
+        const sub = (a, b) => {
+          return a - b;
+        };
+        console.log("sub : " + sub(10, 5));
+
+        const mul = (a, b) => {
+          return a * b;
+        };
+        console.log("mul : " + mul(10, 5));
+
+        const div = (a, b) => {
+          return a / b;
+        };
+        console.log("div : " + sub(10, 5));
+
+        const mod = (a, b) => {
+          return a % b;
+        };
+        console.log("mod : " + sub(10, 5));
+      }
+      {
+        let arr = [1, 2, 3, 4, 5, 6, 7];
+        let arr1 = [8, 9, 10, 11, 12];
+
+        const spreadsub = (...a) => {
+          let c = 0;
+          a.forEach((val) => {
+            c = c - val;
+          });
+          return c;
+        };
+
+        console.log("spread Sub :" + spreadsub(1, 2, 3, 4, 5));
+        console.log("spread Sub :" + spreadsub(...arr, ...arr1));
+      }
+    </script>
+  </body>
+</html>

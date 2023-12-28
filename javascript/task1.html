@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function arrayFilter() {
+      //   let arr = [2, 3, 7, 9, 8, 5, 6, 4, 3, 5, 6];
+      let json = {
+        data: [
+          { name: "rankumar", age: 45, gender: "male" },
+          { name: "rkumar", age: 12, gender: "male" },
+          { name: "k kumar", age: 18, gender: "male" },
+          { name: "v kumar", age: 16, gender: "male" },
+          { name: "n kumar", age: 65, gender: "male" },
+          { name: "o kumar", age: 25, gender: "male" },
+          { name: "rankumar", age: 55, gender: "male" },
+          { name: "rankumar", age: 85, gender: "male" },
+        ],
+      };
+      let kidsArray = json.data.filter(user => user.age < 18);
+      let mapArray = json.data.map(
+        (user) => `${user.name}/${user.gender.substring(0, 1).toUppeCase()}`
+      );
+      alert(`kids ${JSON.stringify(kidsArray)}`);
+      alert(`Map ${mapArray}`);
+      //alert(`kids ${JSON.stringify(kidsArray)}`);
+
+      //   let evenArray = arr.filter((n) => n % 2 == 0);
+      //   let oddArray = arr.filter((n) => n % 2 == 1);
+      //   let mapArray = arr.map((e) => e * 2);
+      // //   alert(` sqrt number:${mapArray}`);
+
+      // //   alert(`Even nnumber:${evenArray}`);
+      // //   alert(`Odd nnumber:${oddArray}`);
+
+      //   let n = 567;
+      //   if (n % 2 == 0) alert("even number");
+      //   else a lert("odd number");
+      // }
+    }
+    arrayFilter();
+  </script>
+  <body></body>
+</html>
